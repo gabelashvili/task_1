@@ -123,8 +123,8 @@ const Details = () => {
   }
 
   const handleSubmit = () => {
-    const isAllValid = Object.values(validData)
-    if (isAllValid.length === 9) {
+    const isAllValid = Object.values(validData).filter(o => o === true)
+    if (isAllValid.length >= 9) {
       alert('თქვენ წარმატებით გაიარეთ რეგისტრაცია“')
     } else {
       const newState = Object.keys(state).reduce((initialState, item) => ({
